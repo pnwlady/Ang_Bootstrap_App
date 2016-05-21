@@ -7,6 +7,14 @@
   </head>
   <body data-ng-app="store">
     <article data-ng-controller="StoreController as store">
+      <section data-ng-init="tab = 1"
+        <ul class="nav nav-pills">
+          <li a href data-ng-click="tab = 1">Description</li>
+          <li a href data-ng-click="tab = 2">Specifications</li>
+          <li a href data-ng-click="tab = 3">Review</li>
+          {{ tab }}
+        </ul>
+      </section>
       <section data-ng-repeat="product in store.products | orderBy: '-price'">
         <section data-ng-hide="store.product.soldOut">
           <h1> {{ store.product.name }}</h1>
