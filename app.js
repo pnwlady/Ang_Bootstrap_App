@@ -1,12 +1,16 @@
-// require('angular');
-
 (function() {
   var app = angular.module('store', []);
 
-  app.controller('StoreController' , function() {
-    this.product = gem;
+  app.controller('StoreController', function() {
+    this.product = gems;
   });
 
+  app.controller('PanelController', function() {
+    this.tab = 1;
+    this.selectTab = function(setTab) {
+      this.tab = setTab;
+    };
+  });
 })();
 
 var gems = [
