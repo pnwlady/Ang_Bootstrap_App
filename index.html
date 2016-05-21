@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Twitter App</title>
+  </head>
+  <body>
+    <article data-ng-controller="StoreController as store">
+      <section data-ng-repeat="product in store.products">
+        <section data-ng-hide="store.product.soldOut">
+          <h1> {{ store.product.name }}</h1>
+          <h2> ${{ store.product.price }}</h2>
+          <p>
+            {{ store.product.description }}
+          </p>
+          <button data-ng-show="store.product.canPurchase">Add to Cart</button>
+        </section>
+      </section>
+    </article>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+  </body>
+</html>
