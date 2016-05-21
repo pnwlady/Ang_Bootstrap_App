@@ -9,9 +9,9 @@
     <article data-ng-controller="StoreController as store">
       <section data-ng-init="tab = 1"
         <ul class="nav nav-pills">
-          <li a href data-ng-click="tab = 1">Description</li>
-          <li a href data-ng-click="tab = 2">Specifications</li>
-          <li a href data-ng-click="tab = 3">Review</li>
+          <li data-ng-class="{ active:tab === 1 }" a href data-ng-click="tab = 1">Description</li>
+          <li  data-ng-class="{ active:tab === 2 }" a href data-ng-click="tab = 2">Specifications</li>
+          <li  data-ng-class="{ active:tab === 3 }" a href data-ng-click="tab = 3">Review</li>
           {{ tab }}
         </ul>
       </section>
