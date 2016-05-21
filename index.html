@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <title>Angular Twitter App</title>
   </head>
-  <body>
+  <body data-ng-app="store">
     <article data-ng-controller="StoreController as store">
       <section data-ng-repeat="product in store.products">
         <section data-ng-hide="store.product.soldOut">
           <h1> {{ store.product.name }}</h1>
-          <h2> ${{ store.product.price }}</h2>
+          <h2 class="pull-right"> ${{ store.product.price | currency }}</h2>
           <p>
             {{ store.product.description }}
           </p>
