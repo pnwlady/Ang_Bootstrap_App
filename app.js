@@ -2,7 +2,30 @@
   var app = angular.module('store', []);
 
   app.controller('StoreController', function() {
-    this.product = gems;
+    this.products = [
+      {
+        name: 'Awesome Multi-touch Keyboard',
+        price: 250.00,
+        description: 'keyboard that can touch stuff',
+        reviews: [
+          {
+            stars: 5,
+            body: "I love this",
+            author: "jane@nelson.com"
+          },
+          {
+            stars: 4,
+            body: "pretty good keyboard",
+            author: "ham@beef.com"
+          },
+          {
+            stars: 1,
+            body: "meh",
+            author: "tim@hater.com"
+          }
+        ]
+      }
+    ];
   });
 
   app.controller('PanelController', function() {

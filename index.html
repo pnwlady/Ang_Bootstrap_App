@@ -16,8 +16,27 @@
           <li  data-ng-class="{ active:tab === 2 }">
             <a href data-ng-click="panel.selectTab(2)">Specifications</a>
           </li>
-          <li  data-ng-class="{ active:tab === 3 }">
+          <li  class="panel" data-ng-show="{ active:tab === 3 }">
             <a href data-ng-click="panel.selectTab(3)">Review</a>
+            <form name="reviewForm">
+              <blockquote ng-repeat="review in product.reveiws">
+                <b>Stars: {{review:stars}}</b>
+                {{review.body}}
+                <cite>by: {{review.author}}</cite>
+              </blockquote>
+              <select data-ng-model="review.stars">
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+              </select>
+              <textarea data-ng-model="review.body" rows="8" cols="40"></textarea>
+              <label>by:</label>
+              <input data-ng-model="review.author" type="email" />
+              <input type="sumbit" value="Submit" />
+            </form>
+
           </li>
           {{ tab }}
         </ul>
